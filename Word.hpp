@@ -1,5 +1,4 @@
 //  Word.hpp
-
 #ifndef Word_hpp
 #define Word_hpp
 

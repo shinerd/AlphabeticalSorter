@@ -1,5 +1,4 @@
 //  Word.cpp
-
 #include "Word.hpp"
 
 Word::Word()

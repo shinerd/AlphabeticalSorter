@@ -1,5 +1,7 @@
-//  Word.hpp
-
+//  main.hpp
+//
+//  quicksort algorithm from GeeksforGeeks
+//
 #include <iostream>
 #include <string>
 #include <filestream>
@@ -11,7 +13,7 @@
 
 using namespace std;
 
-int CountNum() const
+int CountNum()
 {
     ifstream fin;
     fin.open(FILE);
@@ -29,7 +31,7 @@ int CountNum() const
     return num;
 }
 
-void ReadFile(const num, Word* list) const // const?
+void ReadFile(const num, Word* list)
 {
     ifstream fin;
     fin.open(FILE);
@@ -87,12 +89,8 @@ void quickSort(Word* list, int low, int high)
 {
     if (low < high)
     {
-        /* pi is partitioning index, arr[p] is now
-         at right place */
         int pi = partition(list, low, high);
-        
-        // Separately sort elements before
-        // partition and after partition
+
         quickSort(list, low, pi - 1);
         quickSort(list, pi + 1, high);
     }
